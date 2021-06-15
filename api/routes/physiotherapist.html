@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CS230 - Summer Exam</title>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Importing Lato font from google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Use Bootstrap for the form styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Use W3.CSS for the Modal -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Extra Styles for the Bootstrap Forms */
+        h1 {
+            font: 40px 'Lato', sans-serif;;
+            text-align: center;
+        }
+        h2 {
+            font: 30px 'Lato', sans-serif;;
+            text-align: center;
+        }
+        h3 {
+            font: 23px 'Lato', sans-serif;;
+            text-align: center;
+        }
+        legend {
+            padding: 10px;
+            font: 30px 'Lato', sans-serif;
+        }
+        div {
+            font: 15px 'Lato', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CS230 - Summer Exam</h1>
+    <h2>Michael Alexey Tuohy</h2>
+    <h3>Student Number: 19517549</h3>
+
+    <br />
+
+    <!-- 
+        Bootstrap Styled Form: Add User to Database 
+        Generated using the Bootsnipp Form Builder and Generator for Bootstrap
+        https://bootsnipp.com/forms
+    -->
+    <div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <form id="addPhysiotherapistForm" class="form-horizontal">
+                    <fieldset>
+                        <!-- Form Name -->
+                        <legend>Add Physiotherapist to Database</legend>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="title">Title:</label>
+                            <div class="col-md-4">
+                                <select id="title" name="title" class="form-control">
+                                    <option value="Mx">Mx</option>
+                                    <option value="Ms">Ms</option>
+                                    <option value="Mr">Mr</option>
+                                    <option value="Mrs">Mrs</option>
+                                    <option value="Miss">Miss</option>
+                                    <option value="Dr">Dr</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <span class="help-block">Choose your title!</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Text Input - First Name -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="firstname">First Name</label>
+                            <div class="col-md-4">
+                                <input id="firstname" name="firstname" placeholder="First Name"
+                                    class="form-control input-md" required="">
+                                <span class="help-block">Please enter your first name!</span>
+                            </div>
+                        </div>
+
+                        <!-- Text Input - Surname -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="surname">Surname</label>
+                            <div class="col-md-4">
+                                <input id="surname" name="surname" type="text" placeholder="Surname"
+                                    class="form-control input-md" required="">
+                                <span class="help-block">Please enter your Surname!</span>
+                            </div>
+                        </div>
+
+                         <!-- Text Input - Mobile -->
+                         <div class="form-group">
+                            <label class="col-md-4 control-label" for="mobile">Mobile</label>
+                            <div class="col-md-4">
+                                <input id="mobile" name="mobile" type="text" placeholder="Mobile"
+                                    class="form-control input-md" required="">
+                                <span class="help-block">Please enter your Mobile!</span>
+                            </div>
+                        </div>
+
+                        <!-- Text Input - Home Phone -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="homePhone">Home Phone</label>
+                            <div class="col-md-4">
+                                <input id="homePhone" name="homePhone" type="text" placeholder="Home phone"
+                                    class="form-control input-md" required="">
+                                <span class="help-block">Please enter your home phone!</span>
+                            </div>
+                        </div>
+
+                        <!-- Text Input - Email -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="email">Email</label>
+                            <div class="col-md-4">
+                                <input id="email" name="email" type="text" placeholder="Email"
+                                    class="form-control input-md" required="">
+                                <span class="help-block">Please enter your Email Address!</span>
+                            </div>
+                        </div>
+
+                        <!-- Text Input - Address Line 1 -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="addressline1">Address Line 1</label>
+                            <div class="col-md-4">
+                                <input id="addressline1" name="addressline1" type="text" placeholder="Address Line 1"
+                                    class="form-control input-md" required="">
+                                <span class="help-block">Please enter your Address Line 1!</span>
+                            </div>
+                        </div>
+
+                        <!-- Text Input - Address Line 2 -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="addressline2">Address Line 2</label>
+                            <div class="col-md-4">
+                                <input id="addressline2" name="addressline2" type="text" placeholder="Address Line 2"
+                                    class="form-control input-md">
+                                <span class="help-block">Please enter your Address Line 2!</span>
+                            </div>
+                        </div>
+
+                        <!-- Text Input - Town -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="town">Town</label>
+                            <div class="col-md-4">
+                                <input id="town" name="town" type="text" placeholder="Town"
+                                    class="form-control input-md" required="">
+                                <span class="help-block">Please enter your Town!</span>
+                            </div>
+                        </div>
+
+                        <!-- Text Input - City/County -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="citycounty">City/County</label>
+                            <div class="col-md-4">
+                                <input id="citycounty" name="citycounty" type="text" placeholder="City/County"
+                                    class="form-control input-md" required="">
+                                <span class="help-block">Please enter your City/County!</span>
+                            </div>
+                        </div>
+
+                        <!-- Text Input - Eircode -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="eircode">Eircode</label>
+                            <div class="col-md-4">
+                                <input id="eircpde" name="eircode" type="text" placeholder="Eircode"
+                                    class="form-control input-md">
+                                <span class="help-block">Please enter your Eircode!</span>
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="submit"></label>
+                            <div class="col-md-4">
+                                <input type="submit" value="Send User Data" class="btn btn-primary">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <!-- 
+        Bootstrap Styled Form: Add User to Database 
+        Generated using the Bootsnipp Form Builder and Generator for Bootstrap
+        https://bootsnipp.com/forms
+    -->
+    <div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <form id="getPhysiotherapistDatabaseForm" class="form-horizontal">
+                    <fieldset>
+                        <!-- Form Name -->
+                        <legend>Show Physiotherapist Database</legend>
+
+                        <!-- Textarea -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="showPhysiotherapistDatabase">Physiotherapist Database</label>
+                            <div class="col-md-4">
+                                <textarea class="form-control" id="showPhysiotherapistDatabase"
+                                    name="showPhysiotherapistDatabase">Retrieved Database displayed here!</textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="submit"></label>
+                            <div class="col-md-4">
+                                <input type="submit" value="Get Physiotherapist Database" class="btn btn-primary">
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <form id="searchPhysiotherapistDatabaseForm" class="form-horizontal">
+                    <fieldset>
+                        <!-- Form Name -->
+                        <legend>Search Physiotherapist</legend>
+                        
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="searchPhysiotherapist">Search</label>  
+                            <div class="col-md-4">
+                                <input id="searchPhysiotherapist" name="searchPhysiotherapist" type="text" placeholder="Physiotherapist" class="form-control input-md" required="">
+                                <span class="help-block">Search for Physiotherapist data</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Textarea -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="textarea">Searched Physiotherapist Data</label>
+                            <div class="col-md-4">                     
+                                <textarea class="form-control" id="textarea" name="textarea">Retrieved Data</textarea>
+                            </div>
+                        </div>
+                        
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="searchBtn"></label>
+                            <div class="col-md-4">
+                                <button id="searchBtn" name="searchBtn" class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <form id = "updatePhysiotherapistDatabaseForm" class="form-horizontal">
+                    <fieldset>
+                        <!-- Form Name -->
+                        <legend>Update Physiotherapist</legend>
+                        
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="updatedPhysiotherapist">Update Physiotherapist</label>  
+                            <div class="col-md-4">
+                                <input id="updatedPhysiotherapist" name="updatedPhysiotherapist" type="text" placeholder="Physiotherapist ID" class="form-control input-md" required="">
+                                <span class="help-block">Enter Physiotherapist ID to update</span>  
+                            </div>
+                        </div>
+                        
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="mobilePhysiotherapist">Update Mobile</label>  
+                            <div class="col-md-4">
+                                <input id="mobilePhysiotherapist" name="mobilePhysiotherapist" type="text" placeholder="Mobile" class="form-control input-md" required="">
+                                <span class="help-block">Enter new mobile number</span>  
+                            </div>
+                        </div>
+                        
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="homePhonePhysiotherapist">Update Home Phone</label>  
+                            <div class="col-md-4">
+                                <input id="homePhonePhysiotherapist" name="homePhonePhysiotherapist" type="text" placeholder="home Phone" class="form-control input-md" required="">
+                                <span class="help-block">Enter new home phone</span>  
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="emailPhysiotherapist">Update Email</label>  
+                            <div class="col-md-4">
+                                <input id="emailPhysiotherapist" name="emailPhysiotherapist" type="text" placeholder="Email" class="form-control input-md" required="">
+                                <span class="help-block">Enter new email</span>  
+                            </div>
+                        </div>
+                        
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="updateBtn"></label>
+                            <div class="col-md-4">
+                                <button id="updateBtn" name="updateBtn" class="btn btn-primary">Enter</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <form id = "deletePhysiotherapistDatabaseForm" class="form-horizontal">
+                    <fieldset>
+                        <!-- Form Name -->
+                        <legend>Delete Physiotherapist</legend>
+                        
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="deletePhysiotherapist">Physiotherapist ID</label>  
+                            <div class="col-md-4">
+                                <input id="deletePhysiotherapist" name="deletePhysiotherapist" type="text" placeholder="Physiotherapist ID" class="form-control input-md" required="">
+                                <span class="help-block">Enter Physiotherapist ID to delete</span>  
+                            </div>
+                        </div>
+                        
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="deleteBtn"></label>
+                            <div class="col-md-4">
+                                <button id="deleteBtn" name="deleteBtn" class="btn btn-primary">Enter</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        Modal Popup used to confirm User Data was sent and added to Database 
+        W3.CSS Styled Form generated using W3.CSS modal demos
+        https://www.w3schools.com/w3css/w3css_modal.asp
+    -->
+    <div id="modalPhysiotherapistAdded" class="w3-modal w3-animate-opacity">
+        <div class="w3-modal-content w3-card-4">
+            <header class="w3-container w3-blue-grey">
+                <span onclick="document.getElementById('modalPhysiotherapistAdded').style.display='none'"
+                    class="w3-button w3-large w3-display-topright">&times;</span>
+                <h2>User Added to Database!</h2>
+            </header>
+            <div class="w3-container">
+                <p></p>
+                <p id="modalPhysiotherapistAddedMessage">Message Text</p>
+            </div>
+            <footer class="w3-container w3-blue-grey">
+                <p></p>
+            </footer>
+        </div>
+    </div>
+
+    <br/>
+
+    <!-- 
+        jQuery Scripts used to implement form processing and Ajax functionality
+        https://www.w3schools.com/w3css/w3css_modal.asp
+    -->
+    <script>
+        $(document).ready(function () {
+            // handle "Add User to Database" submit button click
+            $('#addPhysiotherapistForm').submit(function (e) {
+                var physiotherapist = {
+                    personalDetails: {
+                        title: $('#title :selected').val(),
+                        firstname: $('input[name=firstname]').val(),
+                        surname: $('input[name=surname]').val()
+                    },
+                    contactInformation: {
+                        mobile: $('input[name=mobile]').val(),
+                        homePhone: $('input[name=homePhone]').val(),
+                        email: $('input[name=email]').val(),
+                    },
+                    homeAddress: {
+                        addressline1: $('input[name=addressline1]').val(),
+                        addressline2: $('input[name=addressline2]').val(),
+                        town: $('input[name=town]').val(),
+                        citycounty: $('input[name=citycounty]').val(),
+                        eircode: $('input[name=eircode]').val(),
+                    }
+                };
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://localhost:8000/physiotherapist-api',
+                    data: physiotherapist
+                })
+                    .done(function (data) {
+                        $('input[name=firstname]').val('');
+                        $('input[name=surname]').val('');
+                        $('input[name=mobile]').val('');
+                        $('input[name=homePhone]').val('');
+                        $('input[name=email]').val('');
+                        $('input[name=addressline1]').val('');
+                        $('input[name=addressline2]').val('');
+                        $('input[name=town]').val('');
+                        $('input[name=citycounty]').val('');
+                        $('input[name=eircode]').val('');
+                        showPhysiotherapistModal(data);
+                    });
+                e.preventDefault();
+            });
+
+            $('#getPhysiotherapistDatabaseForm').submit(function (e) {
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8000/physiotherapist-api'
+                })
+                    .done(function (data) {
+                        $('#showPhysiotherapistDatabase').val(JSON.stringify(data, null, 2)).trigger('input');
+                    });
+                e.preventDefault();
+            });
+
+            $("#showPhysiotherapistDatabase").on("input", function () {
+                this.style.height = (this.scrollHeight) + "px;overflow-y:hidden;";
+                this.style.height = "auto";
+                this.style.height = (this.scrollHeight) + "px";
+            });
+        });
+
+
+
+        $('#updatePhysiotherapistDatabaseForm').submit(function(e) { 
+            var update = {
+                mobile: $('input[name=mobilePhysiotherapist]').val(),
+                homePhone: $('input[name=homePhonePhysiotherapist]').val(),
+                email: $('input[name=emailPhysiotherapist]').val()
+            };
+            $.ajax({
+                type: "POST",
+                url: 'http://localhost:8000/physiotherapist-api/' + $('input[name=updatedPhysiotherapist]').val(),
+                data: update
+            })
+                .done(function (data) {
+                    $('input[name=updatedPhysiotherapist]').val(''),
+                    $('input[name=mobilePhysiotherapist]').val(''),
+                    $('input[name=homePhonePhysiotherapist]').val(''),
+                    $('input[name=emailPhysiotherapist]').val('')
+                });
+            e.preventDefault();
+        })
+
+
+        $('#deletePhysiotherapistDatabaseForm').submit(function(e) { 
+            $.ajax({
+                type: "DELETE",
+                url: 'http://localhost:8000/physiotherapist-api/' + $('input[name=deletePhysiotherapist]').val()
+            })
+                .done(function (data) {
+                    $('input[name=deletePhysiotherapist]').val('')
+                });
+            e.preventDefault();
+        })
+        function showPhysiotherapistModal(data) {
+            document.getElementById('modalPhysiotherapistAddedMessage').innerHTML = data;
+            document.getElementById('modalPhysiotherapistAdded').style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>
