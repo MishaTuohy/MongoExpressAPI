@@ -1,0 +1,57 @@
+Client Test
+{
+    "personalDetails": {
+        "title": "Mr",
+        "fname": "Michael",
+        "lname": "Tuohy",
+        "dob": "03/02/1999"
+    },
+    "contactInformation": {
+        "mobile": "11111111111",
+        "homePhone": "222222222",
+        "msgPhone": "Y",
+        "email": "michael.tuohy.2020@mumail.ie"
+    },
+    "homeAddress": {
+        "addressLine1": "NUIM",
+        "addressLine2": "",
+        "town": "Maynooth",
+        "county_city": "Co.Kildare",
+        "eircode": ""
+    },
+    "parent_guardian": "N/A",
+    "doctor": "Mheo Torgan",
+    "referredBy": "Mheo Torgan"
+}
+
+
+Physiotherapist Test
+{
+    "personalDetails": {
+        "title": "Dr",
+        "fname": "Mheo",
+        "lname": "Torgan"
+    },
+    "contactInformation": {
+        "mobile": "0192837465",
+        "homePhone": "0192837465",
+        "email": "theo.morgan@mail.ie"
+    },
+    "homeAddress": {
+        "addressLine1": "bruh",
+        "addressLine2": "",
+        "town": "bruh",
+        "county_city": "bruh",
+        "eircode": ""
+    }
+}
+
+Session Test
+{
+    "client": "A Client's id",
+    "physiotherapist": "A Physiotherapist's id",
+    "fee": "200",
+    "sessionDuration": "60",
+    "sessionType": "Electric Theraphy",
+    "sessionNotes": "Very effective still, don't know why people think electric theraphy is bad."
+}
