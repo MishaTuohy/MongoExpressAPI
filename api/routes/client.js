@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Client = require('../schemas/client-schema');
 
-// Get All
+// Gets all 
 router.get("/", (req, res, next) => {
     Client.find()
       .exec()
@@ -131,7 +131,7 @@ router.patch("/:clientId", (req, res, next) => {
             });
   });
 
-// Delete by Id
+  // Deletes by Id
 router.delete('/:clientId', (req, res, next) => {
     const id = req.params.clientId;
     Client.deleteOne({ _id: id})
