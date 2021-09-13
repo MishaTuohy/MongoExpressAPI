@@ -1,13 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
 const Client = require('../schemas/client-schema');
 
-router.get('/client-page', function (req, res) {
-    res.sendFile(path.join(__dirname, '/client.html'));
-})
-
-
+// Get All
 router.get("/", (req, res, next) => {
     Client.find()
       .exec()
@@ -56,7 +51,7 @@ router.get("/", (req, res, next) => {
       });
   });
 
-// Gets specific phone document
+// Get by Id
 router.get('/:clientId', (req, res, next) => {
     const id = req.params.clientId;
     Client.findById(id)
@@ -75,7 +70,7 @@ router.get('/:clientId', (req, res, next) => {
         });
 });
 
-// Creates new phone document
+// Post
 router.post('/', (req, res, next) => {
     const client = new Client({
         personalDetails: {
@@ -118,6 +113,7 @@ router.post('/', (req, res, next) => {
         });
 });
 
+// Update
 router.patch("/:clientId", (req, res, next) => {
     const id = req.params.clientId;
     Client.updateOne({_id: id}, {$set: req.body})
@@ -135,6 +131,7 @@ router.patch("/:clientId", (req, res, next) => {
             });
   });
 
+// Delete by Id
 router.delete('/:clientId', (req, res, next) => {
     const id = req.params.clientId;
     Client.deleteOne({ _id: id})
