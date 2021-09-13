@@ -1,12 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
 const Session = require('../schemas/session-schema');
 
-router.get('/session-page', function (req, res) {
-    res.sendFile(path.join(__dirname, '/session.html'));
-})
-
+// Gets all 
 router.get("/", (req, res, next) => {
     Session.find()
       .exec()
@@ -39,7 +35,7 @@ router.get("/", (req, res, next) => {
       });
   });
 
-// Gets specific phone document
+// Gets by Id
 router.get('/:sessionId', (req, res, next) => {
     const id = req.params.sessionId;
     Session.findById(id)
@@ -58,7 +54,7 @@ router.get('/:sessionId', (req, res, next) => {
         });
 });
 
-// Creates new phone document
+// Post
 router.post('/', (req, res, next) => {
     const session = new Session({
         client: req.body.client,
@@ -85,6 +81,7 @@ router.post('/', (req, res, next) => {
         });
 });
 
+// Updatet
 router.patch("/:sessionId", (req, res, next) => {
     const id = req.params.sessionId;
     Session.updateMany({_id: id}, {$set: req.body})
@@ -102,6 +99,7 @@ router.patch("/:sessionId", (req, res, next) => {
             });
   });
 
+// Delete by Id
 router.delete('/:sessionId', (req, res, next) => {
     const id = req.params.sessionId;
     Session.deleteOne({ _id: id})
