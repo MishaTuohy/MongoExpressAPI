@@ -7,17 +7,10 @@
  * 
  * Michael Alexey Tuohy
  * 19517549
- * The two working links are as follows:
- *  http://localhost:8000/physiotherapist-api/physiotherapist-page
- *  and
- *  http://localhost:8000/client-api/client-page
- * 
- * This is all my code.
- * All of the html code, schema is reused from assignements
- * The only new code is in routes and app.js which is just a combination of code from assignment 05 and various documentation from express.js
- * 
- * Unfortunately i only got part c done for crud functionality for the client and physiotherapist
- * Crud funcitonality still exists for the session model but just not with an interface.
+ *  Use these links for testing - Go to server.js and manually input the port number you would like to use
+ *  http://localhost:Port-Number/client-api
+ *  http://localhost:Port-Number/physiotherapist-api
+ *  http://localhost:Port-Number/session-api
  * 
  */
 
