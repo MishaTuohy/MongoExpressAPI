@@ -26,7 +26,7 @@ const physiotherapistRoute = require('./api/routes/physiotherapist');
 const sessionRoute = require('./api/routes/session');
 
 // Connnect to database
-const mongoPath = 'mongodb+srv://cs230:cs230@cluster.f0xng.mongodb.net/CS230?retryWrites=true&w=majority';
+const mongoPath = '';
 mongoose.connect(mongoPath, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
