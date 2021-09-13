@@ -1,12 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
 const Physiotherapist = require('../schemas/physiotherapist-schema');
 
-router.get('/physiotherapist-page', function (req, res) {
-    res.sendFile(path.join(__dirname, '/physiotherapist.html'));
-})
 
+// Gets all physiotherapist document
 router.get("/", (req, res, next) => {
     Physiotherapist.find()
       .exec()
@@ -50,7 +47,7 @@ router.get("/", (req, res, next) => {
       });
   });
 
-// Gets specific phone document
+// Gets specific physiotherapist document
 router.get('/:physiotherapistId', (req, res, next) => {
     const id = req.params.physiotherapistId;
     Physiotherapist.findById(id)
@@ -69,7 +66,7 @@ router.get('/:physiotherapistId', (req, res, next) => {
         });
 });
 
-// Creates new phone document
+// Creates new physiotherapist document
 router.post('/', (req, res, next) => {
     const physiotherapist = new Physiotherapist({
         personalDetails: {
@@ -107,6 +104,7 @@ router.post('/', (req, res, next) => {
         });
 });
 
+// Updates a physiotherapist document
 router.patch("/:physiotherapistId", (req, res, next) => {
     const id = req.params.physiotherapistId;
     Physiotherapist.updateOne({_id: id}, {$set: {
@@ -126,6 +124,7 @@ router.patch("/:physiotherapistId", (req, res, next) => {
             });
   });
 
+  // Deletes a physiotherapist document
 router.delete('/:physiotherapistId', (req, res, next) => {
     const id = req.params.physiotherapistId;
     Physiotherapist.deleteOne({ _id: id})
